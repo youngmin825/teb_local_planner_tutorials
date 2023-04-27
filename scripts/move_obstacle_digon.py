@@ -39,12 +39,12 @@ def callback_base_pose_ground_truth(base_pose_ground_truth):
 
   # Turn in y-direction
   if base_pose_ground_truth.pose.pose.position.y >= posy_ub and base_pose_ground_truth.pose.pose.position.x >= posx_ub:
-    Twist_msg.linear.y = -2*vel_y
-    Twist_msg.linear.x = -2*vel_y
+    Twist_msg.linear.y = -vel_y
+    Twist_msg.linear.x = -vel_y
 
   if base_pose_ground_truth.pose.pose.position.y <= posy_lb and base_pose_ground_truth.pose.pose.position.x <= posx_lb:
-    Twist_msg.linear.y = 2*vel_y
-    Twist_msg.linear.x = 2*vel_y
+    Twist_msg.linear.y = vel_y
+    Twist_msg.linear.x = vel_y
 
 # This function initializes the mover node and publishes continously a Twist message
 def move_object():

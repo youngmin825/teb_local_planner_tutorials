@@ -1,0 +1,57 @@
+include "robots/diff_drive_robot.inc"
+
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+resolution 0.1
+interval_sim 100  # simulation timestep in milliseconds
+
+window
+(
+  size [ 600.0 700.0 ]
+  center [ 0.0 0.0 ]
+  rotate [ 0.0 0.0 ]
+  scale 60
+)
+
+floorplan
+(
+  name "maze"
+  bitmap "../maps/map9.png"
+
+  # 1/20 original size
+
+  # map6.pgm
+  # size [ 59.2 36.8 2.0 ]
+  # pose [ 23 19.25 0.0 0.0 ] # map_center
+  
+  # map6.png
+  # size [ 59.05 36.75 2.0 ]
+  # pose [ 29.525 18.375 0.0 0.0 ]
+
+  # map9.png
+  size [ 53.05 43.55 2.0 ]
+  pose [ 26.525 21.775 0.0 0.0 ]
+)
+
+# throw in a robot
+# robot init position
+diff_drive_robot
+(
+  pose [ 7.79 28.71 0.0 0.0  ]
+  name "robot"
+)

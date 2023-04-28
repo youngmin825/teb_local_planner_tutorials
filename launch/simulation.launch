@@ -101,7 +101,7 @@
   <!--node name="visualize_velocity_profile" pkg="teb_local_planner_tutorials" type="visualize_velocity_profile.py" output="screen" /-->
 
   <!--  **************** Visualisation ****************  -->
-  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_tutorials)/cfg/rviz_navigation_cc.rviz">
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find teb_local_planner_tutorials)/cfg/rviz_navigation_teb.rviz">
     <remap from="/move_base_simple/goal" to="/robot_0/move_base_simple/goal" />
     <remap from="/initialpose" to="/robot_0/initialpose"/>
     <!-- <remap from="/scan" to="/robot_0/scan" /> -->

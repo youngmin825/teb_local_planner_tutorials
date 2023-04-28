@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 
 import rospy, math
 from geometry_msgs.msg import  PolygonStamped

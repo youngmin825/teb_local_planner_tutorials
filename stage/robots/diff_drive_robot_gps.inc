@@ -13,7 +13,7 @@ define mylaser ranger
 define myrobot position
 (
   
-  size [ 0.25 0.25 0.40 ] # (x,y,z)
+  size [ 0.30 0.30 0.40 ] # (x,y,z)
   localization "gps" # exact localization
   gui_nose 1  # draw nose showing heading
   drive "diff" # diff-drive

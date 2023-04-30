@@ -3,6 +3,7 @@
 import rospy, math, random
 from geometry_msgs.msg import Twist, Pose
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Int32
 
 # Parameters
 vel_max = 1.0
@@ -25,6 +26,10 @@ else:
 Twist_msg = Twist()
 
 
+def flag_callback(msg):
+   flag = msg.data
+   move_object()
+
 # This function manages turnarounds and new (possibly random) velocities of the object
 def callback_base_pose_ground_truth(base_pose_ground_truth):
   # Define random velocity if no specific velocity is defined in the parameter server
@@ -42,7 +47,7 @@ def callback_base_pose_ground_truth(base_pose_ground_truth):
 
 # This function initializes the mover node and publishes continously a Twist message
 def move_object():
-  rospy.init_node("Mover")
+  # rospy.init_node("Mover")
   r = rospy.Rate(10)
   pub = rospy.Publisher('cmd_vel', Twist, queue_size=10)
   sub = rospy.Subscriber('base_pose_ground_truth', Odometry, callback_base_pose_ground_truth)
@@ -63,6 +68,8 @@ def move_object():
 
 if __name__ == '__main__': 
   try:
-    move_object()
+    rospy.init_node('move_obstacle_weidth')
+    rospy.Subscriber("/flag", Int32, flag_callback, queue_size=10)
+    rospy.spin()
   except rospy.ROSInterruptException:
     pass

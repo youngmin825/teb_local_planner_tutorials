@@ -6,6 +6,7 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal, MoveBaseActionResul
 from geometry_msgs.msg import PoseWithCovarianceStamped
 from std_msgs.msg import Float64MultiArray
 import actionlib
+from std_msgs.msg import Int32
 
 
 
@@ -13,10 +14,12 @@ waypoints = [[13.7, 3.0, 0.0], [0.0, 0.0, 0.0, 0.1]]
 
 if __name__ == '__main__':
     rospy.init_node('path_planing')
-    
+    pub = rospy.Publisher('/flag', Int32, queue_size = 10) 
     client = actionlib.SimpleActionClient('/robot_0/move_base', MoveBaseAction) 
     client.wait_for_server()
 
+    flag = Int32()
+    flag.data = 1
     goal_pose = MoveBaseGoal()
     goal_pose.target_pose.header.frame_id = 'map'
 
@@ -31,9 +34,13 @@ if __name__ == '__main__':
     goal_pose.target_pose.pose.orientation.z = waypoints[1][2]
     goal_pose.target_pose.pose.orientation.w = waypoints[1][3]
 
+    r = rospy.Rate(1)
     # 목표 지점으로 이동하라고 명령을 보낸다.
     client.send_goal(goal_pose)
-    client.wait_for_result()
+    while not (client.get_state() == actionlib.GoalStatus.SUCCEEDED):
+        pub.publish(flag)
+        r.sleep()
+    # client.wait_for_result()
     
 
 

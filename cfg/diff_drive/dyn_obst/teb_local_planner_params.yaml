@@ -33,7 +33,8 @@ TebLocalPlannerROS:
     
  # Obstacles
     
- min_obstacle_dist: 0.6 # This value must also include our robot radius, since footprint_model is set to "point".
+#  min_obstacle_dist: 0.6 # This value must also include our robot radius, since footprint_model is set to "point".
+ min_obstacle_dist: 0.5
  inflation_dist: 0.8
  dynamic_obstacle_inflation_dist: 0.6
  include_dynamic_obstacles: True

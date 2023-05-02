@@ -14,14 +14,14 @@ vel_min = 0.1
 if rospy.has_param("pos_lb"):
   posx_lb = rospy.get_param("pos_lb")
 else:
-  posx_lb = 10.0
+  posx_lb = 1.14
 
 # Upper bound of the obstacle movement in y-direction
 if rospy.has_param("pos_ub"):
   posx_ub = rospy.get_param("pos_ub")
 else:
   # pos_ub = 5.5
-  posx_ub = 12.0
+  posx_ub = 4.68
 # Define global Twist message which is modified in the callback_base_pose_ground_truth and published in the main loop
 Twist_msg = Twist()
 

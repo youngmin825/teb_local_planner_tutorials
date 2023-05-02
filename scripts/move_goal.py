@@ -10,7 +10,7 @@ from std_msgs.msg import Int32
 
 
 
-waypoints = [[13.7, 3.0, 0.0], [0.0, 0.0, 0.0, 0.1]]
+waypoints = [[14.5, 14.9, 0.0], [0.0, 0.0, 0.0, 0.1]]
 
 if __name__ == '__main__':
     rospy.init_node('path_planing')

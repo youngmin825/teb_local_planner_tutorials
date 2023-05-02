@@ -33,46 +33,29 @@ window
 # throw in a robot
 myrobot
 (
-  pose [ 2.0 3.0 0.0 0.0 ]
+  pose [ 2.0 -2.0 0.0 0.0 ]
   name "turtlebot"
 )
 #############################################
 
 myobstacle
 (
-  pose [ 4.0 3.0 0.0 0.0 ]
+  pose [ 1.25 -0.53 0.0 0.0 ]
   name "obstacle0"
 )
 
 myobstacle
 (
-  pose [ 5.0 1.5 0.0 0.0 ]
+  pose [ 1.14 5.22 0.0 0.0 ]
   name "obstacle1"
 )
 
 myobstacle
 (
-  pose [ 7.5 3.0 0.0 0.0 ]
+  pose [ 3.57 7.52 0.0 0.0 ]
   name "obstacle2"
 )
 
-myobstacle
-(
-  pose [ 8.5 1.47 0.0 0.0 ]
-  name "obstacle3"
-)
-
-myobstacle
-(
-  pose [ 10.0 2.14 0.0 0.0 ]
-  name "obstacle4"
-)
-
-myobstacle
-(
-  pose [ 11.5 3.58 0.0 0.0 ]
-  name "obstacle5"
-)
 
 floorplan
 (
@@ -80,7 +63,7 @@ floorplan
   bitmap "../maps/map7.png"
   size [ 33.05 30.500 2.000 ]
   # pose [ 12.5 3.0 0.000 0.000 ]
-  pose [ 0.56 -0.33 0.000 0.000 ]
+  pose [ -8.43 2.81 0.000 0.000 ]
 )
 
 

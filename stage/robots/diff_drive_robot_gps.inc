@@ -14,7 +14,7 @@ define myrobot position
 (
   
   size [ 0.30 0.30 0.40 ] # (x,y,z)
-  localization "odom" # exact localization
+  localization "gps" # exact localization
   gui_nose 1  # draw nose showing heading
   drive "diff" # diff-drive
   color "red" # red model

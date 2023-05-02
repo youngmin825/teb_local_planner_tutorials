@@ -14,14 +14,14 @@ vel_min = 0.1
 if rospy.has_param("pos_lb"):
   pos_lb = rospy.get_param("pos_lb")
 else:
-  pos_lb = 2.3
+  pos_lb = 7.52
 
 # Upper bound of the obstacle movement in y-direction
 if rospy.has_param("pos_ub"):
   pos_ub = rospy.get_param("pos_ub")
 else:
   # pos_ub = 5.5
-  pos_ub = 3.0
+  pos_ub = 14.02
 # Define global Twist message which is modified in the callback_base_pose_ground_truth and published in the main loop
 Twist_msg = Twist()
 
@@ -40,9 +40,9 @@ def callback_base_pose_ground_truth(base_pose_ground_truth):
 
   # Turn in y-direction
   if base_pose_ground_truth.pose.pose.position.y >= pos_ub:
-    Twist_msg.linear.y = -vel_y
+    Twist_msg.linear.y = -2*vel_y
   if base_pose_ground_truth.pose.pose.position.y <= pos_lb:
-    Twist_msg.linear.y = vel_y
+    Twist_msg.linear.y = 2*vel_y
 
 
 # This function initializes the mover node and publishes continously a Twist message

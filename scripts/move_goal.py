@@ -7,6 +7,7 @@ from geometry_msgs.msg import PoseWithCovarianceStamped
 from std_msgs.msg import Float64MultiArray
 import actionlib
 from std_msgs.msg import Int32
+import time
 
 
 
@@ -36,11 +37,12 @@ if __name__ == '__main__':
 
     r = rospy.Rate(1)
     # 목표 지점으로 이동하라고 명령을 보낸다.
+    start = time.time()
     client.send_goal(goal_pose)
     while not (client.get_state() == actionlib.GoalStatus.SUCCEEDED):
         pub.publish(flag)
         r.sleep()
     # client.wait_for_result()
-    
+    print("{} second").format(time.time() - start)
 
 

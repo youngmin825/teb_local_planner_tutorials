@@ -17,7 +17,7 @@ TebLocalPlannerROS:
  max_vel_x: 0.4
  max_vel_x_backwards: 0.2
  max_vel_y: 0.0
- max_vel_theta: 0.3
+ max_vel_theta: 1.0
  acc_lim_x: 0.5
  acc_lim_theta: 0.5
  min_turning_radius: 0.0 # diff-drive robot (can turn on place!)
@@ -34,7 +34,7 @@ TebLocalPlannerROS:
  # Obstacles
     
 #  min_obstacle_dist: 0.6 # This value must also include our robot radius, since footprint_model is set to "point".
- min_obstacle_dist: 0.5
+ min_obstacle_dist: 0.3
  inflation_dist: 0.8
  dynamic_obstacle_inflation_dist: 0.6
  include_dynamic_obstacles: True
@@ -55,7 +55,7 @@ TebLocalPlannerROS:
  weight_acc_lim_x: 2
  weight_acc_lim_theta: 2
  weight_kinematics_nh: 1000
- weight_kinematics_forward_drive: 1
+ weight_kinematics_forward_drive: 1000
  weight_kinematics_turning_radius: 1
  weight_optimaltime: 1
  weight_obstacle: 50

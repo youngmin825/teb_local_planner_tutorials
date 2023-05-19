@@ -1,0 +1,45 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/robotics/kobuki_ws/devel/include/**",
+        "/home/robotics/turtlebot_ws/devel/include/**",
+        "/home/robotics/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/robotics/catkin_ws/src/2023_autocarz_0323/autocarz-main/include/**",
+        "/home/robotics/catkin_ws/src/imu_vn_100/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_auto_docking/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_bumper2pc/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_controller_tutorial/include/**",
+        "/home/robotics/turtlebot_ws/src/kobuki_gazebo_plugins/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_keyop/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_node/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_random_walker/include/**",
+        "/home/robotics/kobuki_ws/src/kobuki/kobuki_safety_controller/include/**",
+        "/home/robotics/kobuki_ws/src/teb_local_planner/include/**",
+        "/home/robotics/turtlebot_ws/src/turtlebot_apps/turtlebot_actions/include/**",
+        "/home/robotics/catkin_ws/src/ublox/ublox_gps/include/**",
+        "/home/robotics/catkin_ws/src/ublox/ublox_msg_filters/include/**",
+        "/home/robotics/catkin_ws/src/ublox/ublox_msgs/include/**",
+        "/home/robotics/catkin_ws/src/ublox/ublox_serialization/include/**",
+        "/home/robotics/catkin_ws/src/velodyne/velodyne_driver/include/**",
+        "/home/robotics/catkin_ws/src/velodyne/velodyne_laserscan/include/**",
+        "/home/robotics/catkin_ws/src/velodyne/velodyne_pcl/include/**",
+        "/home/robotics/catkin_ws/src/velodyne/velodyne_pointcloud/include/**",
+        "/home/robotics/turtlebot_ws/src/yocs_cmd_vel_mux/include/**",
+        "/home/robotics/turtlebot_ws/src/yocs_controllers/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
